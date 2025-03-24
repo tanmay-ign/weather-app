@@ -1,0 +1,122 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.home-content {
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.dark-mode .home-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.home-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.home-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-page h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.floating-clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  max-width: 250px;
+  opacity: 0.7;
+}
+
+.cloud-1 {
+  top: 10%;
+  right: 10%;
+}
+
+.cloud-2 {
+  top: 50%;
+  left: 5%;
+}
+
+.cloud-3 {
+  bottom: 15%;
+  right: 15%;
+}
+
+.loading-indicator {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+}
+
+.loading-indicator img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .home-page h1 {
+    font-size: 2rem;
+  }
+  
+  .home-page p {
+    font-size: 1rem;
+  }
+  
+  .home-content {
+    padding: 20px;
+  }
+  
+  .home-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cloud {
+    max-width: 150px;
+  }
+} 

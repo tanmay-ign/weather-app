@@ -1,0 +1,115 @@
+.recent-searches {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.recent-searches h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.searches-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.search-card {
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.search-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+  transform: translateY(-3px);
+}
+
+.search-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.search-city {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.search-country {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.search-temp {
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.weather-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.search-card:hover .weather-icon {
+  transform: scale(1.1);
+}
+
+.no-searches {
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-style: italic;
+  padding: 15px;
+}
+
+/* Light mode adjustments */
+.light-mode .recent-searches {
+  background-color: rgba(240, 240, 240, 0.5);
+}
+
+.light-mode .search-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+}
+
+.light-mode .search-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+}
+
+.light-mode .search-city,
+.light-mode .search-country,
+.light-mode .search-temp {
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .searches-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .searches-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
